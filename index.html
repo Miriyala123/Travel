@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bhavya's Travel Blog</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <h1>🌍 Bhavya's Travel Blog</h1>
+
+            <p>Login to explore the world</p>
+
+            <form id="loginForm">
+
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+            <div class="login-info">
+                <p><strong>Demo Login</strong></p>
+                <p>Username: bhavya</p>
+                <p>Password: 12345</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MAIN WEBSITE ================= -->
+    <div id="mainWebsite" style="display: none;">
+
+        <!-- Navigation Bar -->
+        <header>
+
+            <nav class="navbar">
+
+                <div class="logo">
+                    🌍 Bhavya's Travel Blog
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <button class="logout-btn" onclick="logout()">
+                    Logout
+                </button>
+
+            </nav>
+
+        </header>
+
+
+        <!-- ================= HOME ================= -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <h1>Explore The World With Bhavya</h1>
+
+                <p>
+                    Discover beautiful destinations, amazing experiences
+                    and unforgettable travel stories.
+                </p>
+
+                <a href="#destinations" class="hero-button">
+                    Explore Destinations
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="about">
+
+            <h2>Welcome to My Travel Blog</h2>
+
+            <p>
+                Hello! I'm <strong>Bhavya</strong>.
+                Welcome to my travel blog where I share my favourite
+                destinations, travel experiences, beautiful places and
+                useful travel tips.
+            </p>
+
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+        <section id="destinations" class="section">
+
+            <h2>Popular Destinations</h2>
+
+            <div class="destination-container">
+
+                <div class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+                        alt="Goa Beach"
+                    >
+
+                    <div class="card-content">
+                        <h3>🏖️ Goa</h3>
+
+                        <p>
+                            Enjoy beautiful beaches, sunsets and
+                            exciting adventures in Goa.
+                        </p>
+
+                        <button onclick="showMessage('Goa')">
+                            Explore Goa
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+                        alt="Manali Mountains"
+                    >
+
+                    <div class="card-content">
+                        <h3>🏔️ Manali</h3>
+
+                        <p>
+                            Experience beautiful mountains, snow and
+                            peaceful nature in Manali.
+                        </p>
+
+                        <button onclick="showMessage('Manali')">
+                            Explore Manali
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80"
+                        alt="Kerala"
+                    >
+
+                    <div class="card-content">
+                        <h3>🌴 Kerala</h3>
+
+                        <p>
+                            Explore peaceful backwaters, greenery and
+                            beautiful landscapes.
+                        </p>
+
+                        <button onclick="showMessage('Kerala')">
+                            Explore Kerala
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div class="destination-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80"
+                        alt="Rajasthan"
+                    >
+
+                    <div class="card-content">
+                        <h3>🏰 Rajasthan</h3>
+
+                        <p>
+                            Discover royal palaces, forts, culture and
+                            traditional food.
+                        </p>
+
+                        <button onclick="showMessage('Rajasthan')">
+                            Explore Rajasthan
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BLOGS ================= -->
+        <section id="blogs" class="section blog-section">
+
+            <h2>Latest Travel Blogs</h2>
+
+            <div class="blog-container">
+
+                <article class="blog-card">
+
+                    <h3>✈️ My First Travel Adventure</h3>
+
+                    <p>
+                        Travelling gives us an opportunity to discover
+                        new places, meet new people and create wonderful
+                        memories.
+                    </p>
+
+                    <a href="#contact">Read More</a>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <h3>🌅 Beautiful Places to Visit</h3>
+
+                    <p>
+                        From peaceful beaches to beautiful mountains,
+                        India has many amazing destinations to explore.
+                    </p>
+
+                    <a href="#contact">Read More</a>
+
+                </article>
+
+
+                <article class="blog-card">
+
+                    <h3>🎒 Simple Travel Tips</h3>
+
+                    <p>
+                        Plan your trip, carry essential items and always
+                        keep your travel documents safe.
+                    </p>
+
+                    <a href="#contact">Read More</a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GALLERY ================= -->
+        <section id="gallery" class="section">
+
+            <h2>Travel Gallery</h2>
+
+            <div class="gallery">
+
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                    alt="Beach"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                    alt="Mountain"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
+                    alt="Travel Landscape"
+                >
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80"
+                    alt="Travel Road"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact">
+
+            <h2>Contact Bhavya</h2>
+
+            <p>
+                Have a travel suggestion or want to share your
+                experience? Send me a message!
+            </p>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+            <p id="contactMessage"></p>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer>
+
+            <h3>🌍 Bhavya's Travel Blog</h3>
+
+            <p>
+                Explore • Travel • Discover • Create Memories
+            </p>
+
+            <p>
+                © 2026 Bhavya's Travel Blog. All Rights Reserved.
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
